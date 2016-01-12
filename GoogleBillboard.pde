@@ -1,14 +1,15 @@
-public final static String e = "2.718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059";  
+public final static String e = "2718281828459045235360287471352662497757247093699959574966967627724076630353547594571382178525166427427466391932003059";  
 
 public void setup()  
 {            
      noLoop();  
      
      for(int p = 0; p < e.length()-1; p++){
-double num = Double.parseDouble(e.substring(p,p+9));
+double num = Double.parseDouble(e.substring(p,p+10));
      if(isPrime(num) == true){
      
       System.out.println(num);
+      break;
      }
      }
      
@@ -27,15 +28,13 @@ public boolean isPrime(double dNum)
       return false;
     }
     
-    for(int j = 2; j < Math.sqrt(10); j++){
+    for(int j = 2; j < Math.sqrt(dNum); j++){
       
       if(dNum % j == 0){
       return false;       
       }
       
-      return true;
-      break;
-    
-    
 
-} }
+}
+return true;
+}
