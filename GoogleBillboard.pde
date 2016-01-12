@@ -6,9 +6,10 @@ public void setup()
      
      for(int p = 0; p < e.length()-1; p++){
 double num = Double.parseDouble(e.substring(p,p+9));
-     if(isPrime(num) = true){
+     if(isPrime(num) == true){
      
       System.out.println(num);
+     }
      }
      
 }  
@@ -17,6 +18,7 @@ public void draw()
   
 	//not needed for this assignment
 }  
+
 public boolean isPrime(double dNum)  
 {   
     //to be finished later   
@@ -25,7 +27,7 @@ public boolean isPrime(double dNum)
       return false;
     }
     
-    for(int j = 2; i < Math.sqrt(10); j++){
+    for(int j = 2; j < Math.sqrt(10); j++){
       
       if(dNum % j == 0){
       return false;       
@@ -34,6 +36,6 @@ public boolean isPrime(double dNum)
       return true;
       break;
     
-    }
+    
 
-} 
+} }
